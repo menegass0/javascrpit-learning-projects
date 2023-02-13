@@ -41,6 +41,22 @@ body{
     margin-bottom: 10px;
     background: var(--light);
     justify-content: space-between;
+    /* animation: show_toast 0.3s ease forwards; */
+}
+
+@keyframes show_toast{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(10px);
+    }
 }
 .toast::before{
     position: absolute;
@@ -49,6 +65,12 @@ body{
     width: 50%;
     bottom: 0px;
     left: 0px;
+    /* animation: progress 5s linear forwards; */
+}
+@keyframes progress{
+    100%{
+        width: 0%;
+    }
 }
 
 .toast.success::before, .btn#success{
