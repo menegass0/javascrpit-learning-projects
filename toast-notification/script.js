@@ -2,6 +2,7 @@ const notifications = document.querySelector(".notifications"),
 buttons = document.querySelectorAll(".buttons .btn");
 
 const toastDetails = {
+    timer:5000,
     success:{
         icon: 'fa-circle-check',
         text: 'Success: this is a success toast.',
@@ -19,7 +20,10 @@ const toastDetails = {
         text: 'Info: this is a info toast.',
     }
 }
-
+const removeToast = (toast) =>{
+    toast.classList.add("hide");
+    setTimeout(()=> toast.remove(), 500)
+}
 
 const createToast = (id) =>{
     //getting icon and text for the toast based on the id passed
@@ -33,6 +37,7 @@ const createToast = (id) =>{
                         <i class="fa-solid fa-xmark"></i>`;
 
     notifications.appendChild(toast);
+    setTimeout(()=> removeToast(toast), toastDetails.timer)
 }
 
 //adding a click event listener to each button to creat a toat when clicked
