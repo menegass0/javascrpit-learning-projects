@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6f0797e64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul class="notifications">
+        <li class="toast succsess">
+            <div class="column">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Success: this is a success toast.</span>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </li>
+        <li class="toast error">
+            <div class="column">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <span>Error: this is a error toast.</span>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </li>
+        <li class="toast warning">
+            <div class="column">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Warning: this is a Warning toast.</span>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </li>
+        <li class="toast info">
+            <div class="column">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Info: this is a info toast.</span>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </li>
+    </ul>
+    <div class="buttons">
+        <button class="btn" id="success">Success</button>
+        <button class="btn" id="error">Error</button>
+        <button class="btn" id="warning">Warning</button>
+        <button class="btn" id="info">Info</button>
+    </div>
+</body>
+</html>

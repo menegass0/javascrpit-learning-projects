@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;  
+}
+:root{
+    --dark:#34495E;
+    --light: #ffffff;
+    --success: #0ABF30;
+    --error: #E24D4C;
+    --warning: #E9BD8C;
+    --info: #3498DB;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--dark);
+}
+.notifications{
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+.notifications :where(.toast, .column) {
+    display: flex;
+    align-items: center;
+    
+}
+.notifications .toast{
+    width: 400px;
+    list-style: none;
+    border-radius: 4px;
+    padding: 16px 17px;
+    margin-bottom: 10px;
+    background: var(--light);
+    justify-content: space-between;
+}
+.toast .column i{
+    font-size: 1.75rem;
+}
+.toast .column span{
+    font-size: 1.07rem;
+    margin-left: 12px;
+}
+.toast i:last-child{
+    color: #aeb0d7;
+    cursor: pointer;
+}
+.toast i:last-child:hover{
+    color: var(--dark);
+}
