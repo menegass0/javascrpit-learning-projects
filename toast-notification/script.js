@@ -22,6 +22,7 @@ const toastDetails = {
 }
 const removeToast = (toast) =>{
     toast.classList.add("hide");
+    if(toast.timeoutId) clearTimeout(toast.timeoutId);
     setTimeout(()=> toast.remove(), 500)
 }
 
@@ -34,10 +35,10 @@ const createToast = (id) =>{
                         <i class="fa-solid ${icon}"></i>
                         <span>${text}</span>
                         </div>
-                        <i class="fa-solid fa-xmark"></i>`;
+                        <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`;
 
     notifications.appendChild(toast);
-    setTimeout(()=> removeToast(toast), toastDetails.timer)
+    toast.timeoutId = setTimeout(()=> removeToast(toast), toastDetails.timer)
 }
 
 //adding a click event listener to each button to creat a toat when clicked
