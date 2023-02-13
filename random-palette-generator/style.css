@@ -45,3 +45,19 @@ body{
     font-size: 1.15rem;
     font-weight: 500;
 }
+
+.refresh-btn{
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #8A6CFF;
+    border: 2px solid #fff;
+    box-shadow: 0 15px 25px rgba(52, 87,220, 0.2);
+    transform: translateX(-50%);
+}
